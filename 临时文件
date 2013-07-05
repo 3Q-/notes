@@ -1,0 +1,54 @@
+迅雷会员
+779253751@qq.com
+nianNI
+
+1.git stash  or git stash pop; 
+//有时在branch new工作，修改了好一些东西，这时老大说原来的那个版本有bug，但是这时候你不想add，checkout到master去也git status也有修改的状态，不能直接修改master，这时应该用git stash暂时存档，然后修改master，再读档 git stash pop
+
+2.git reset head a.txt;
+//master里有a.txt. 现在开发新功能，a.txt在不同的地方有各种不一的修改，老大说不用这个功能了,git reset head a.txt, git checkout a.txt; 就返回了最后一次提交的a.txt;
+
+如果已修改某几个文件，但是想撤销到某个版本，但是当前暂存区，工作区不想撤销
+git rest --sort commitId
+
+
+cp -R project/.git /tmp/project.git  复制并重命名！
+git fetch origin 下代码
+git push origin master(也可以是分支名)
+如果是把分支合并到当前分支，git merge origin/(分支名),
+分化出一个新的分支来git checkout -b branchName origin/serverfix
+
+
+
+我照着群主的视频在centos装gitolite
+sudo adduser --system --shell /bin/bash --group git
+sudo adduser git ssh
+sudo passwd git
+su git
+mkdir apps
+cd apps
+git clone git://github.com/ossxp-com/gitolite.git
+cd gitolite/src/
+./gl-system-install
+环境变量
+cd ~
+gl-setup /home/thanks/admin.pub
+
+
+
+love 活力 挚爱 激情 情迷 螺纹 凸点螺纹 超薄 热感 持久;
+
+绅士装：6个love， 2个超薄，2个激情，2个情迷装
+猛男装：2个love，2个持久，2个热感，2个螺纹，2个凸点螺纹，2个挚爱
+
+AIN'T NO SUNSHINE
+
+
+http://search.51job.com/job/52576373,c.html
+http://search.51job.com/job/54515885,c.html
+http://search.51job.com/job/49228181,c.html
+
+
+
+
+

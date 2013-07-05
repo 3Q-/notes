@@ -1,0 +1,13 @@
+2013年 03月 10日 星期日 00:37:58 CST
+安装node。
+1.下载node tar -sudo tar -zxvf path/node.tar.gz
+2../configure --  sudo make && sudo make install 
+3.安装npm 现在node自带npm
+    sudo npm install pack_json
+4.node-dev安装
+sudo npm install node-dev -g
+
+5
+Error: Cannot find module 'connect/lib/middleware/session/memory'
+
+

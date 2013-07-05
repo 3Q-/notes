@@ -1,0 +1,113 @@
+git clone git://192.168.2.200/static /static/haoduojie/static
+
+//git 管理
+
+ibus-daemon -drx
+ps aux | grep node
+kill server.js
+nohup node server.js
+
+删除vim
+apt-get --purge remove vim-common
+apt-get --purge remove vim-tinny
+
+git status //查看改动了什么
+git add -A
+git commit -m "sitemap改版" -a
+git branch ／／查看分支；
+
+git pull git://192.168.1.200/static //pull
+
+/matchit.vim
+
+上传东西到服务器 scp -P 22000 layou.html root@IP:/路径
+连接到服务器  ssh -p 22000 root@IP
+
+linux-headers-3.2.0-29 linux-headers-3.2.0-29-generic libbabl-0.0-0 libgegl-0.0-0
+
+按productId分组查询该product有多少评论;
+select productId,replyId,count(*) as count from Reply group by productId order by replyId;
+
+var str = '@[好多折]friend:1043 @[诚心诚意13140]friend:2925 @[好多姐姐]friend:1041 @[Lame Chic韩国进口春夏现货丝质男士修身长袖针织开衫]sell:20000000459-30000012295  来@看[dddd]看这个';
+var reg = /@\[.+?\]/g;
+
+var r = /@\[.+?\].*?:.+?\s/g;
+
+function handler(data){
+    //@[好多折]friend:1043 
+    return data.replace(/\[|(\][^:]*:\d+.*?\s)/g, '') + ' ';
+}
+
+str = str.replace(r, handler);
+
+//var nStr = str.match(reg);
+console.log(str) 
+
+:w !sudo tee % 
+
+<div class="r">该页数据更新于 <span id="domainarr">21天前 <input type="button" onclick="QCheck('haoduojie.com');this.disabled=true;this.value='查询中..'" value="强制更新"></span></div>
+
+$('#j_p_postlist').find('img').each(function(){
+    var src = $(this).attr('src');
+    var r = /\/[^\/]*$/;
+    var s = src.match(r);
+    $(this).attr('src','http://imgsrc.baidu.com/forum/pic/item'+s).removeAttr('width').removeAttr('height');
+});
+
+
+var s = 'http://imgsrc.baidu.com/forum/w%3D580/sign=893322bb01e9390156028d364bee54f9/dddfffffffffffffff';
+var r = /(?!\/)[^\/]+$/;
+var t = s.match(r);
+console.log(t)
+
+
+.js文件双击不能打开
+打开文件夹－>编辑－>首选项－>行为－>可执行文本文件（选第二个）
+
+
+
+#ibus右shitf键切换输入法
+1,cd /usr/share/ibus-table/engine/
+2,sudo vim table.py
+3,搜索 “Match mode switch hotkey”
+# Match mode switch hotkey
+if not self._editor._t_chars and ( self._match_hotkey (key, keysyms.Shift_L, modifier.SHIFT_MASK + modifier.RELEASE_MASK)):
+把 Shift_L 改为 Shift_R
+
+4,搜索 “because we ignore all Release event below”
+if self._match_hotkey (key, keysyms.Shift_R, modifier.SHIFT_MASK + modifier.RELEASE_MASK) and self._ime_py:
+把 Shift_R 改为 Shift_L
+保存。
+
+重启ibus输入法
+
+
+装完ubuntu无法进入系统，ymcfgrub
+解决方法，用刷好的u盘进临时ubuntu系统
+Ctrl+Alt+T 打开终端
+输入 sudo -i
+输入 sudo mount /dev/sda6 /mnt (将sda6换成你的分区/ 的名字)
+输入 sudo mount /dev/sda6 /mnt/boot (将sda6换成你的分区/boot 的名字)
+输入 sudo grub-install --root-directory=/mnt/ /dev/sda
+输入 sudo reboot
+
+
+:%s/<[^>]*>/\n/g
+%s#<li><li>#'&'#g
+%s#<.*>#'&'#g  //给每行html代码两边加上如 <li></li>  --> '<li></li>',
+:%s/\s*\zs.\{-}\ze\s*$/'&',/g
+
+找到所有关于ngix的东西
+sudo find / | grep 'nginx'
+set foldmethod=syntax        " 选择代码折叠类型
+"set foldlevel=100           " 禁止自动折叠
+runtime macros/matchit.vim
+"set laststatus=2                          " 开启状态栏信息
+set cmdheight=1                           " 命令行的高度，默认为1，这里可以重设
+
+
+
+vim新建文件夹
+:!mkdir 
+查看全部文件
+:!ls

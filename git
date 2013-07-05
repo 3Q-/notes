@@ -1,0 +1,46 @@
+No adminkey given - not setting up gitolite. //安装时
+
+1.cd src/gl-system-install 加环境变量
+2.会在当前目录下生成bin share 二个目录
+3.需要把自己的pub_key复制到服务器的一个临时目录中就可
+
+xiexie在auscar上建gitolite
+
+1.sudo adduser --system --shell /bin/bash --group git
+2.sudo adduser git ssh
+3.sudo passwd git
+4.ssh-copy-id -i xiexie.pub git@192.168.1.111 //这里要完成ssh git＠192.168.1.111可以访问
+
+1.git clone git://github.com/ossxp-com/gitolite.git
+cd gitolite/src
+./gl-system-install
+cd 
+gl-setup admin.pub
+
+sudo userdel -r newuser 
+
+三.在旧的机器上无法以直接apt-get install或yum install gitolite的信赖包，
+
+先到http://packages.ubuntu.com/fr/quantal/gitolite下载gitolite_2.3.orig.tar.gz
+1.sudo adduser --system --shell /bin/bash --group git
+2.sudo adduser git ssh
+3.sudo passwd git
+4.gitolite_2.3.orig.tar.gz解压到git用户主目录下
+5.su git
+6.tar -zvxf gitolite_2.3.orig.tar.gz gitolite
+7.cd gitolite/src
+8./gl-system-install
+8./gl-setup admin.pub
+完成了吧
+
+git的常用命令
+1 git push origin  :master //删除远程分支，git push [远程名] [本地分支]:[远程分支]
+那就等于是在说“在这里提取空白然后把它变成[远程分支]”
+
+git fetch orgin
+git checkout -b branch origin/branch  在远程分支的基础上分化出来一个新的分支，和远各分支一样
+
+git 分支改名
+git branch -m oldbranch newbranch
+
+
