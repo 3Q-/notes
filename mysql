@@ -88,4 +88,4 @@ use mysql;
 select host,user,password from user;
 
 grant select,update,insert,delete on *.* to root(root用户)@ip identified by "123456(密码)";
-grant select,update,insert,delete on *.* to root@198.46.139.119 identified by "auscar147896325";
+grant select,update,insert,delete on *.* to root@198.46.139.119 identified by "*******";
